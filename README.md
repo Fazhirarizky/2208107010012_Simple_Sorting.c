@@ -1,5 +1,5 @@
-# Fazhira Rizky Harmayani
-# 2208107010012_Simple_Sorting.c
+Fazhira Rizky Harmayani
+2208107010012_Simple_Sorting.c
 
 # Sorting Algorithma Benchmark
 
