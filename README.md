@@ -1,74 +1,38 @@
 Fazhira Rizky Harmayani
 2208107010012_Simple_Sorting.c
 
-# Sorting Algorithma Benchmark
+*Cara Menjalankan Program:*
 
-## Deskripsi
-Program ini mengimplementasikan beberapa algoritma pengurutan (Bubble Sort, Selection Sort, dan Insertion Sort) dan membandingkan kinerjanya untuk ukuran masukan yang berbeda. Kinerja algoritma diukur dengan mencatat waktu eksekusi untuk setiap algoritma pada setiap ukuran masukan.
+1. Pastikan Anda memiliki compiler C yang terinstal di sistem Anda, seperti GCC.
+2. Unduh file sumber sorting.c.
+3. Buka terminal atau command prompt.
+4. Arahkan terminal ke direktori tempat Anda menyimpan file sorting.c.
+5. Kompilasi program dengan menjalankan perintah berikut di terminal:
 
-## Kompilasi dan Eksekusi
-Untuk mengompilasi program, jalankan perintah berikut di terminal atau command prompt:
-```
-gcc sorting.c -o sorting -Wall
-```
+   gcc sorting.c -o sorting
 
-Untuk menjalankan program, gunakan perintah:
+   Pastikan tidak ada kesalahan saat kompilasi.
+   
+6. Setelah berhasil dikompilasi, jalankan program dengan mengetikkan:
+   
+   ./sorting
+   
+Program akan mulai menguji dan mengurutkan array dengan berbagai ukuran menggunakan tiga algoritma pengurutan yang berbeda.
 
-```
-./sorting
-```
+7. Setelah program selesai berjalan, Anda dapat melihat hasil pengurutan dan waktu eksekusi yang dicatat dalam file sortingResults.txt.
 
-Hasil dari benchmarking akan disimpan dalam file "sortingResults.txt".
+*Fungsi-fungsi yang Digunakan dalam Kode Program:*
 
-## Algoritma Pengurutan
-Program ini menggunakan tiga algoritma pengurutan berikut:
+1. generateRandomNumbers(int *array, int size): Fungsi ini digunakan untuk mengisi array dengan bilangan acak.
 
-### Bubble Sort
-Bubble Sort adalah algoritma sederhana yang berulang kali membandingkan setiap pasangan elemen dalam daftar dan menukar mereka jika berada dalam urutan yang salah. Algoritma ini memiliki kompleksitas waktu O(n^2), di mana n adalah jumlah elemen dalam array.
+2. bubbleSort(int *array, int size): Implementasi algoritma Bubble Sort untuk mengurutkan array.
 
-### Selection Sort
-Selection Sort adalah algoritma pengurutan yang berulang kali mencari elemen terkecil dari sisa array dan menukarnya dengan elemen pertama. Algoritma ini juga memiliki kompleksitas waktu O(n^2).
+3. selectionSort(int *array, int size): Implementasi algoritma Selection Sort untuk mengurutkan array.
 
-### Insertion Sort
-Insertion Sort adalah algoritma pengurutan yang membagi array menjadi bagian terurut dan tidak terurut. Pada setiap iterasi, algoritma memindahkan satu elemen dari bagian tidak terurut ke bagian terurut dan memastikan bahwa elemen tersebut ditempatkan pada posisi yang benar. Kompleksitas waktu Insertion Sort adalah O(n^2).
+4. insertionSort(int *array, int size): Implementasi algoritma Insertion Sort untuk mengurutkan array.
 
-## Fungsi Utama
+5. copyArray(int *source, int *destination, int size): Fungsi ini digunakan untuk menyalin isi array sumber ke array tujuan.
 
-### generateRandomNumbers
-```c
-void generateRandomNumbers(int *array, int size);
-```
-Fungsi ini digunakan untuk mengisi array dengan angka acak.
+6. performSort(const char *sortName, void (*sortFunction)(int*, int), int *data, int size, FILE *file): Fungsi ini digunakan untuk melakukan pengurutan array menggunakan algoritma yang ditentukan, mencatat waktu eksekusi ke file, dan menulis hasil pengurutan ke file.
 
-### bubbleSort
-```c
-void bubbleSort(int *array, int size);
-```
-Fungsi ini mengimplementasikan algoritma Bubble Sort untuk mengurutkan array.
-
-### selectionSort
-```c
-void selectionSort(int *array, int size);
-```
-Fungsi ini mengimplementasikan algoritma Selection Sort untuk mengurutkan array.
-
-### insertionSort
-```c
-void insertionSort(int *array, int size);
-```
-Fungsi ini mengimplementasikan algoritma Insertion Sort untuk mengurutkan array.
-
-### copyArray
-```c
-void copyArray(int *source, int *destination, int size);
-```
-Fungsi ini menyalin isi array sumber ke array tujuan.
-
-### performSort
-```c
-void performSort(const char *sortName, void (*sortFunction)(int*, int), int *data, int size, FILE *file);
-```
-Fungsi ini melakukan sorting menggunakan algoritma yang diberikan, mencatat waktu eksekusi, dan menyimpan hasil sorting dalam file.
-
----
-
+Dengan mengikuti langkah-langkah di atas, Anda dapat menjalankan program dan menguji berbagai algoritma pengurutan pada array dengan ukuran yang berbeda.
